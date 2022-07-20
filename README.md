@@ -1,3 +1,5 @@
+### Please run `pod install` to install all the required dependencies
+
 # Picnic Task
 
 ## Overview
