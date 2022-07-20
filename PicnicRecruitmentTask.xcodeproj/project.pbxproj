@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24188018C8AEA26B9F015FC7 /* Pods_PicnicRecruitmentTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A648B41B9ECD33C3A8D925 /* Pods_PicnicRecruitmentTask.framework */; };
+		912E15E7287C87D300CC81D9 /* HomeScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15E6287C87D300CC81D9 /* HomeScreenViewModelTests.swift */; };
+		912E15E9287C87E300CC81D9 /* DataLoadErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15E8287C87E300CC81D9 /* DataLoadErrorTests.swift */; };
+		912E15ED287C89D500CC81D9 /* random_gif.json in Resources */ = {isa = PBXBuildFile; fileRef = 912E15EC287C89D500CC81D9 /* random_gif.json */; };
+		912E15EF287C89F400CC81D9 /* search_gifs.json in Resources */ = {isa = PBXBuildFile; fileRef = 912E15EE287C89F400CC81D9 /* search_gifs.json */; };
+		912E15F2287C8A2E00CC81D9 /* JSONDataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15F1287C8A2E00CC81D9 /* JSONDataReader.swift */; };
+		912E15F4287C8A6A00CC81D9 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15F3287C8A6A00CC81D9 /* MockNetworkService.swift */; };
+		9169F92A287CAC93008D9BED /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9169F929287CAC93008D9BED /* README.md */; };
+		91D72DD9287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72DD8287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift */; };
+		91D72DDB287C055200C5AD9D /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72DDA287C055200C5AD9D /* HomeScreenView.swift */; };
+		91D72DDD287C055300C5AD9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D72DDC287C055300C5AD9D /* Assets.xcassets */; };
+		91D72DE0287C055300C5AD9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D72DDF287C055300C5AD9D /* Preview Assets.xcassets */; };
+		91D72DF4287C055300C5AD9D /* PicnicRecruitmentTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72DF3287C055300C5AD9D /* PicnicRecruitmentTaskUITests.swift */; };
+		91D72DF6287C055300C5AD9D /* PicnicRecruitmentTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72DF5287C055300C5AD9D /* PicnicRecruitmentTaskUITestsLaunchTests.swift */; };
+		91D72E07287C084500C5AD9D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E06287C084500C5AD9D /* SearchBar.swift */; };
+		91D72E0A287C099000C5AD9D /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E09287C099000C5AD9D /* UIApplication+Extension.swift */; };
+		91D72E0D287C09DE00C5AD9D /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E0C287C09DE00C5AD9D /* Styles.swift */; };
+		91D72E0F287C106700C5AD9D /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E0E287C106700C5AD9D /* HomeScreenViewModel.swift */; };
+		91D72E11287C1F0700C5AD9D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E10287C1F0700C5AD9D /* NetworkService.swift */; };
+		91D72E13287C54A100C5AD9D /* GifDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E12287C54A100C5AD9D /* GifDetailsView.swift */; };
+		91D72E15287C703200C5AD9D /* DataLoadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E14287C703200C5AD9D /* DataLoadError.swift */; };
+		91D72E18287C74AF00C5AD9D /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E17287C74AF00C5AD9D /* GifImage.swift */; };
+		91D72E1A287C74DE00C5AD9D /* GifImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E19287C74DE00C5AD9D /* GifImageContainer.swift */; };
+		91D72E1C287C74F000C5AD9D /* GifSearchImagesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E1B287C74F000C5AD9D /* GifSearchImagesContainer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91D72DE6287C055300C5AD9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91D72DCD287C055200C5AD9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91D72DD4287C055200C5AD9D;
+			remoteInfo = PicnicRecruitmentTask;
+		};
+		91D72DF0287C055300C5AD9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91D72DCD287C055200C5AD9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91D72DD4287C055200C5AD9D;
+			remoteInfo = PicnicRecruitmentTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A648B41B9ECD33C3A8D925 /* Pods_PicnicRecruitmentTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicnicRecruitmentTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		401E5E6821F2975C20DF53BD /* Pods-PicnicRecruitmentTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicRecruitmentTask.debug.xcconfig"; path = "Target Support Files/Pods-PicnicRecruitmentTask/Pods-PicnicRecruitmentTask.debug.xcconfig"; sourceTree = "<group>"; };
+		912E15E6287C87D300CC81D9 /* HomeScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModelTests.swift; sourceTree = "<group>"; };
+		912E15E8287C87E300CC81D9 /* DataLoadErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadErrorTests.swift; sourceTree = "<group>"; };
+		912E15EC287C89D500CC81D9 /* random_gif.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = random_gif.json; sourceTree = "<group>"; };
+		912E15EE287C89F400CC81D9 /* search_gifs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search_gifs.json; sourceTree = "<group>"; };
+		912E15F1287C8A2E00CC81D9 /* JSONDataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataReader.swift; sourceTree = "<group>"; };
+		912E15F3287C8A6A00CC81D9 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		9169F929287CAC93008D9BED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		91D72DD5287C055200C5AD9D /* PicnicRecruitmentTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicnicRecruitmentTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D72DD8287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicnicRecruitmentTaskApp.swift; sourceTree = "<group>"; };
+		91D72DDA287C055200C5AD9D /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		91D72DDC287C055300C5AD9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91D72DDF287C055300C5AD9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		91D72DE5287C055300C5AD9D /* PicnicRecruitmentTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicnicRecruitmentTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D72DEF287C055300C5AD9D /* PicnicRecruitmentTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicnicRecruitmentTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D72DF3287C055300C5AD9D /* PicnicRecruitmentTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicnicRecruitmentTaskUITests.swift; sourceTree = "<group>"; };
+		91D72DF5287C055300C5AD9D /* PicnicRecruitmentTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicnicRecruitmentTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		91D72E06287C084500C5AD9D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		91D72E09287C099000C5AD9D /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		91D72E0C287C09DE00C5AD9D /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		91D72E0E287C106700C5AD9D /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		91D72E10287C1F0700C5AD9D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		91D72E12287C54A100C5AD9D /* GifDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailsView.swift; sourceTree = "<group>"; };
+		91D72E14287C703200C5AD9D /* DataLoadError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadError.swift; sourceTree = "<group>"; };
+		91D72E17287C74AF00C5AD9D /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		91D72E19287C74DE00C5AD9D /* GifImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageContainer.swift; sourceTree = "<group>"; };
+		91D72E1B287C74F000C5AD9D /* GifSearchImagesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchImagesContainer.swift; sourceTree = "<group>"; };
+		ADDF582C5DA92F61713EB219 /* Pods-PicnicRecruitmentTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicRecruitmentTask.release.xcconfig"; path = "Target Support Files/Pods-PicnicRecruitmentTask/Pods-PicnicRecruitmentTask.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91D72DD2287C055200C5AD9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24188018C8AEA26B9F015FC7 /* Pods_PicnicRecruitmentTask.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91D72DE2287C055300C5AD9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91D72DEC287C055300C5AD9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		211AA42F322B085FFF10A261 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00A648B41B9ECD33C3A8D925 /* Pods_PicnicRecruitmentTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		912E15EA287C89AA00CC81D9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				912E15F3287C8A6A00CC81D9 /* MockNetworkService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		912E15EB287C89B000CC81D9 /* JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				912E15EC287C89D500CC81D9 /* random_gif.json */,
+				912E15EE287C89F400CC81D9 /* search_gifs.json */,
+			);
+			path = JSONs;
+			sourceTree = "<group>";
+		};
+		912E15F0287C8A1000CC81D9 /* TestUtility */ = {
+			isa = PBXGroup;
+			children = (
+				912E15F1287C8A2E00CC81D9 /* JSONDataReader.swift */,
+			);
+			path = TestUtility;
+			sourceTree = "<group>";
+		};
+		91D72DCC287C055200C5AD9D = {
+			isa = PBXGroup;
+			children = (
+				91D72DD7287C055200C5AD9D /* PicnicRecruitmentTask */,
+				91D72DE8287C055300C5AD9D /* PicnicRecruitmentTaskTests */,
+				91D72DF2287C055300C5AD9D /* PicnicRecruitmentTaskUITests */,
+				91D72DD6287C055200C5AD9D /* Products */,
+				CA4D5011C05ED39D9E20782D /* Pods */,
+				211AA42F322B085FFF10A261 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		91D72DD6287C055200C5AD9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91D72DD5287C055200C5AD9D /* PicnicRecruitmentTask.app */,
+				91D72DE5287C055300C5AD9D /* PicnicRecruitmentTaskTests.xctest */,
+				91D72DEF287C055300C5AD9D /* PicnicRecruitmentTaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91D72DD7287C055200C5AD9D /* PicnicRecruitmentTask */ = {
+			isa = PBXGroup;
+			children = (
+				91D72E16287C749C00C5AD9D /* Models */,
+				91D72E0B287C09D600C5AD9D /* Styles */,
+				91D72E08287C097900C5AD9D /* Utilities */,
+				91D72E05287C063400C5AD9D /* NetworkService */,
+				91D72E04287C062B00C5AD9D /* ViewModels */,
+				91D72E03287C062600C5AD9D /* Screens */,
+				91D72E02287C061D00C5AD9D /* Components */,
+				91D72DD8287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift */,
+				91D72DDC287C055300C5AD9D /* Assets.xcassets */,
+				91D72DDE287C055300C5AD9D /* Preview Content */,
+				9169F929287CAC93008D9BED /* README.md */,
+			);
+			path = PicnicRecruitmentTask;
+			sourceTree = "<group>";
+		};
+		91D72DDE287C055300C5AD9D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				91D72DDF287C055300C5AD9D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91D72DE8287C055300C5AD9D /* PicnicRecruitmentTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				912E15F0287C8A1000CC81D9 /* TestUtility */,
+				912E15EB287C89B000CC81D9 /* JSONs */,
+				912E15EA287C89AA00CC81D9 /* Mocks */,
+				912E15E6287C87D300CC81D9 /* HomeScreenViewModelTests.swift */,
+				912E15E8287C87E300CC81D9 /* DataLoadErrorTests.swift */,
+			);
+			path = PicnicRecruitmentTaskTests;
+			sourceTree = "<group>";
+		};
+		91D72DF2287C055300C5AD9D /* PicnicRecruitmentTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				91D72DF3287C055300C5AD9D /* PicnicRecruitmentTaskUITests.swift */,
+				91D72DF5287C055300C5AD9D /* PicnicRecruitmentTaskUITestsLaunchTests.swift */,
+			);
+			path = PicnicRecruitmentTaskUITests;
+			sourceTree = "<group>";
+		};
+		91D72E02287C061D00C5AD9D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				91D72E06287C084500C5AD9D /* SearchBar.swift */,
+				91D72E12287C54A100C5AD9D /* GifDetailsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		91D72E03287C062600C5AD9D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				91D72DDA287C055200C5AD9D /* HomeScreenView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		91D72E04287C062B00C5AD9D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				91D72E0E287C106700C5AD9D /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		91D72E05287C063400C5AD9D /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				91D72E10287C1F0700C5AD9D /* NetworkService.swift */,
+				91D72E14287C703200C5AD9D /* DataLoadError.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		91D72E08287C097900C5AD9D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				91D72E09287C099000C5AD9D /* UIApplication+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		91D72E0B287C09D600C5AD9D /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				91D72E0C287C09DE00C5AD9D /* Styles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		91D72E16287C749C00C5AD9D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91D72E17287C74AF00C5AD9D /* GifImage.swift */,
+				91D72E19287C74DE00C5AD9D /* GifImageContainer.swift */,
+				91D72E1B287C74F000C5AD9D /* GifSearchImagesContainer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA4D5011C05ED39D9E20782D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				401E5E6821F2975C20DF53BD /* Pods-PicnicRecruitmentTask.debug.xcconfig */,
+				ADDF582C5DA92F61713EB219 /* Pods-PicnicRecruitmentTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91D72DD4287C055200C5AD9D /* PicnicRecruitmentTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91D72DF9287C055300C5AD9D /* Build configuration list for PBXNativeTarget "PicnicRecruitmentTask" */;
+			buildPhases = (
+				93D590050D980595270EB808 /* [CP] Check Pods Manifest.lock */,
+				91D72DD1287C055200C5AD9D /* Sources */,
+				91D72DD2287C055200C5AD9D /* Frameworks */,
+				91D72DD3287C055200C5AD9D /* Resources */,
+				C783499B5FC6B5C254E1DA1D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PicnicRecruitmentTask;
+			productName = PicnicRecruitmentTask;
+			productReference = 91D72DD5287C055200C5AD9D /* PicnicRecruitmentTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91D72DE4287C055300C5AD9D /* PicnicRecruitmentTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91D72DFC287C055300C5AD9D /* Build configuration list for PBXNativeTarget "PicnicRecruitmentTaskTests" */;
+			buildPhases = (
+				91D72DE1287C055300C5AD9D /* Sources */,
+				91D72DE2287C055300C5AD9D /* Frameworks */,
+				91D72DE3287C055300C5AD9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91D72DE7287C055300C5AD9D /* PBXTargetDependency */,
+			);
+			name = PicnicRecruitmentTaskTests;
+			productName = PicnicRecruitmentTaskTests;
+			productReference = 91D72DE5287C055300C5AD9D /* PicnicRecruitmentTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		91D72DEE287C055300C5AD9D /* PicnicRecruitmentTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91D72DFF287C055300C5AD9D /* Build configuration list for PBXNativeTarget "PicnicRecruitmentTaskUITests" */;
+			buildPhases = (
+				91D72DEB287C055300C5AD9D /* Sources */,
+				91D72DEC287C055300C5AD9D /* Frameworks */,
+				91D72DED287C055300C5AD9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91D72DF1287C055300C5AD9D /* PBXTargetDependency */,
+			);
+			name = PicnicRecruitmentTaskUITests;
+			productName = PicnicRecruitmentTaskUITests;
+			productReference = 91D72DEF287C055300C5AD9D /* PicnicRecruitmentTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91D72DCD287C055200C5AD9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					91D72DD4287C055200C5AD9D = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					91D72DE4287C055300C5AD9D = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 91D72DD4287C055200C5AD9D;
+					};
+					91D72DEE287C055300C5AD9D = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 91D72DD4287C055200C5AD9D;
+					};
+				};
+			};
+			buildConfigurationList = 91D72DD0287C055200C5AD9D /* Build configuration list for PBXProject "PicnicRecruitmentTask" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91D72DCC287C055200C5AD9D;
+			productRefGroup = 91D72DD6287C055200C5AD9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91D72DD4287C055200C5AD9D /* PicnicRecruitmentTask */,
+				91D72DE4287C055300C5AD9D /* PicnicRecruitmentTaskTests */,
+				91D72DEE287C055300C5AD9D /* PicnicRecruitmentTaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91D72DD3287C055200C5AD9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9169F92A287CAC93008D9BED /* README.md in Resources */,
+				91D72DE0287C055300C5AD9D /* Preview Assets.xcassets in Resources */,
+				91D72DDD287C055300C5AD9D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91D72DE3287C055300C5AD9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912E15EF287C89F400CC81D9 /* search_gifs.json in Resources */,
+				912E15ED287C89D500CC81D9 /* random_gif.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91D72DED287C055300C5AD9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93D590050D980595270EB808 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicnicRecruitmentTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C783499B5FC6B5C254E1DA1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PicnicRecruitmentTask/Pods-PicnicRecruitmentTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PicnicRecruitmentTask/Pods-PicnicRecruitmentTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PicnicRecruitmentTask/Pods-PicnicRecruitmentTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91D72DD1287C055200C5AD9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D72E15287C703200C5AD9D /* DataLoadError.swift in Sources */,
+				91D72E1A287C74DE00C5AD9D /* GifImageContainer.swift in Sources */,
+				91D72E1C287C74F000C5AD9D /* GifSearchImagesContainer.swift in Sources */,
+				91D72DDB287C055200C5AD9D /* HomeScreenView.swift in Sources */,
+				91D72E0F287C106700C5AD9D /* HomeScreenViewModel.swift in Sources */,
+				91D72E0D287C09DE00C5AD9D /* Styles.swift in Sources */,
+				91D72E18287C74AF00C5AD9D /* GifImage.swift in Sources */,
+				91D72DD9287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift in Sources */,
+				91D72E0A287C099000C5AD9D /* UIApplication+Extension.swift in Sources */,
+				91D72E07287C084500C5AD9D /* SearchBar.swift in Sources */,
+				91D72E13287C54A100C5AD9D /* GifDetailsView.swift in Sources */,
+				91D72E11287C1F0700C5AD9D /* NetworkService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91D72DE1287C055300C5AD9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912E15F4287C8A6A00CC81D9 /* MockNetworkService.swift in Sources */,
+				912E15F2287C8A2E00CC81D9 /* JSONDataReader.swift in Sources */,
+				912E15E9287C87E300CC81D9 /* DataLoadErrorTests.swift in Sources */,
+				912E15E7287C87D300CC81D9 /* HomeScreenViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91D72DEB287C055300C5AD9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D72DF6287C055300C5AD9D /* PicnicRecruitmentTaskUITestsLaunchTests.swift in Sources */,
+				91D72DF4287C055300C5AD9D /* PicnicRecruitmentTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91D72DE7287C055300C5AD9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91D72DD4287C055200C5AD9D /* PicnicRecruitmentTask */;
+			targetProxy = 91D72DE6287C055300C5AD9D /* PBXContainerItemProxy */;
+		};
+		91D72DF1287C055300C5AD9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91D72DD4287C055200C5AD9D /* PicnicRecruitmentTask */;
+			targetProxy = 91D72DF0287C055300C5AD9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		91D72DF7287C055300C5AD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		91D72DF8287C055300C5AD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91D72DFA287C055300C5AD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401E5E6821F2975C20DF53BD /* Pods-PicnicRecruitmentTask.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PicnicRecruitmentTask/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ABC.PicnicRecruitmentTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		91D72DFB287C055300C5AD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADDF582C5DA92F61713EB219 /* Pods-PicnicRecruitmentTask.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PicnicRecruitmentTask/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ABC.PicnicRecruitmentTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		91D72DFD287C055300C5AD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ABC.PicnicRecruitmentTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicnicRecruitmentTask.app/PicnicRecruitmentTask";
+			};
+			name = Debug;
+		};
+		91D72DFE287C055300C5AD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ABC.PicnicRecruitmentTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicnicRecruitmentTask.app/PicnicRecruitmentTask";
+			};
+			name = Release;
+		};
+		91D72E00287C055300C5AD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ABC.PicnicRecruitmentTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PicnicRecruitmentTask;
+			};
+			name = Debug;
+		};
+		91D72E01287C055300C5AD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ABC.PicnicRecruitmentTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PicnicRecruitmentTask;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91D72DD0287C055200C5AD9D /* Build configuration list for PBXProject "PicnicRecruitmentTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91D72DF7287C055300C5AD9D /* Debug */,
+				91D72DF8287C055300C5AD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91D72DF9287C055300C5AD9D /* Build configuration list for PBXNativeTarget "PicnicRecruitmentTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91D72DFA287C055300C5AD9D /* Debug */,
+				91D72DFB287C055300C5AD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91D72DFC287C055300C5AD9D /* Build configuration list for PBXNativeTarget "PicnicRecruitmentTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91D72DFD287C055300C5AD9D /* Debug */,
+				91D72DFE287C055300C5AD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91D72DFF287C055300C5AD9D /* Build configuration list for PBXNativeTarget "PicnicRecruitmentTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91D72E00287C055300C5AD9D /* Debug */,
+				91D72E01287C055300C5AD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91D72DCD287C055200C5AD9D /* Project object */;
+}
