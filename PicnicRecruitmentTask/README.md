@@ -1,4 +1,4 @@
-# Picnic Recruitment Task
+# Picnic Task
 
 ## Overview
 
