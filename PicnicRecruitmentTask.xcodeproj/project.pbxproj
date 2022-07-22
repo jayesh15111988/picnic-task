@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24188018C8AEA26B9F015FC7 /* Pods_PicnicRecruitmentTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A648B41B9ECD33C3A8D925 /* Pods_PicnicRecruitmentTask.framework */; };
+		910C4131288A8573008FF15D /* GifsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910C4130288A8573008FF15D /* GifsGridView.swift */; };
 		912E15E7287C87D300CC81D9 /* HomeScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15E6287C87D300CC81D9 /* HomeScreenViewModelTests.swift */; };
 		912E15E9287C87E300CC81D9 /* DataLoadErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15E8287C87E300CC81D9 /* DataLoadErrorTests.swift */; };
 		912E15ED287C89D500CC81D9 /* random_gif.json in Resources */ = {isa = PBXBuildFile; fileRef = 912E15EC287C89D500CC81D9 /* random_gif.json */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		00A648B41B9ECD33C3A8D925 /* Pods_PicnicRecruitmentTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicnicRecruitmentTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		401E5E6821F2975C20DF53BD /* Pods-PicnicRecruitmentTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicRecruitmentTask.debug.xcconfig"; path = "Target Support Files/Pods-PicnicRecruitmentTask/Pods-PicnicRecruitmentTask.debug.xcconfig"; sourceTree = "<group>"; };
+		910C4130288A8573008FF15D /* GifsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifsGridView.swift; sourceTree = "<group>"; };
 		912E15E6287C87D300CC81D9 /* HomeScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModelTests.swift; sourceTree = "<group>"; };
 		912E15E8287C87E300CC81D9 /* DataLoadErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadErrorTests.swift; sourceTree = "<group>"; };
 		912E15EC287C89D500CC81D9 /* random_gif.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = random_gif.json; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				91D72E06287C084500C5AD9D /* SearchBar.swift */,
 				91D72E12287C54A100C5AD9D /* GifDetailsView.swift */,
+				910C4130288A8573008FF15D /* GifsGridView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				91D72E0F287C106700C5AD9D /* HomeScreenViewModel.swift in Sources */,
 				91D72E0D287C09DE00C5AD9D /* Styles.swift in Sources */,
 				91D72E18287C74AF00C5AD9D /* GifImage.swift in Sources */,
+				910C4131288A8573008FF15D /* GifsGridView.swift in Sources */,
 				91D72DD9287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift in Sources */,
 				91D72E0A287C099000C5AD9D /* UIApplication+Extension.swift in Sources */,
 				91D72E07287C084500C5AD9D /* SearchBar.swift in Sources */,
