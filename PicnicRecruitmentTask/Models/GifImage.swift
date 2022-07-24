@@ -23,6 +23,7 @@ struct GifImage: Equatable, Decodable, Identifiable {
     let rating: ImageRating
     let hash: String
     let url: URL
+    let data: Data?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -42,6 +43,7 @@ struct GifImage: Equatable, Decodable, Identifiable {
         let image = originalImage.original
         self.hash = image.hash
         self.url = image.url
+        self.data = try? Data(contentsOf: image.url)
     }
     
     static func ==(lhs: GifImage, rhs: GifImage) -> Bool {

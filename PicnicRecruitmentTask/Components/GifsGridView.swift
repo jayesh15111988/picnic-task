@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct GifsGridView: View {
 
@@ -22,11 +21,9 @@ struct GifsGridView: View {
         LazyVGrid(columns: gridItemLayout, spacing: Spacing.small) {
             ForEach(gifImages) { gifImage in
                 NavigationLink(destination: gifDetailsView(from: gifImage)) {
-                    AnimatedImage(url: gifImage.url, isAnimating: $isAnimatingGifImage).placeholder {
-                        ProgressView()
+                    VStack(spacing: 0) {
+                        GifAnimatedImage(data: gifImage.gifData, placeholderImageName: "search").frame(minWidth: 100, minHeight: 100).scaledToFit()
                     }
-                    .resizable()
-                    .scaledToFit()
                 }
             }
         }

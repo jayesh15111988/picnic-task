@@ -16,6 +16,8 @@
 		912E15F2287C8A2E00CC81D9 /* JSONDataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15F1287C8A2E00CC81D9 /* JSONDataReader.swift */; };
 		912E15F4287C8A6A00CC81D9 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15F3287C8A6A00CC81D9 /* MockNetworkService.swift */; };
 		9169F92A287CAC93008D9BED /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9169F929287CAC93008D9BED /* README.md */; };
+		91BE2F35288D4CBA00C8F600 /* GifAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE2F34288D4CBA00C8F600 /* GifAnimatedImage.swift */; };
+		91C4B207288C10F900E01FB2 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4B206288C10F900E01FB2 /* APIRoute.swift */; };
 		91D72DD9287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72DD8287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift */; };
 		91D72DDB287C055200C5AD9D /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72DDA287C055200C5AD9D /* HomeScreenView.swift */; };
 		91D72DDD287C055300C5AD9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D72DDC287C055300C5AD9D /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		912E15F1287C8A2E00CC81D9 /* JSONDataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataReader.swift; sourceTree = "<group>"; };
 		912E15F3287C8A6A00CC81D9 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		9169F929287CAC93008D9BED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		91BE2F34288D4CBA00C8F600 /* GifAnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifAnimatedImage.swift; sourceTree = "<group>"; };
+		91C4B206288C10F900E01FB2 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
 		91D72DD5287C055200C5AD9D /* PicnicRecruitmentTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicnicRecruitmentTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D72DD8287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicnicRecruitmentTaskApp.swift; sourceTree = "<group>"; };
 		91D72DDA287C055200C5AD9D /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 		91D72E02287C061D00C5AD9D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				91BE2F34288D4CBA00C8F600 /* GifAnimatedImage.swift */,
 				91D72E06287C084500C5AD9D /* SearchBar.swift */,
 				91D72E12287C54A100C5AD9D /* GifDetailsView.swift */,
 				910C4130288A8573008FF15D /* GifsGridView.swift */,
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				91D72E10287C1F0700C5AD9D /* NetworkService.swift */,
+				91C4B206288C10F900E01FB2 /* APIRoute.swift */,
 				91D72E14287C703200C5AD9D /* DataLoadError.swift */,
 			);
 			path = NetworkService;
@@ -467,8 +473,10 @@
 				91D72E0D287C09DE00C5AD9D /* Styles.swift in Sources */,
 				91D72E18287C74AF00C5AD9D /* GifImage.swift in Sources */,
 				910C4131288A8573008FF15D /* GifsGridView.swift in Sources */,
+				91BE2F35288D4CBA00C8F600 /* GifAnimatedImage.swift in Sources */,
 				91D72DD9287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift in Sources */,
 				91D72E0A287C099000C5AD9D /* UIApplication+Extension.swift in Sources */,
+				91C4B207288C10F900E01FB2 /* APIRoute.swift in Sources */,
 				91D72E07287C084500C5AD9D /* SearchBar.swift in Sources */,
 				91D72E13287C54A100C5AD9D /* GifDetailsView.swift in Sources */,
 				91D72E11287C1F0700C5AD9D /* NetworkService.swift in Sources */,

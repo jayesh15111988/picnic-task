@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import FLAnimatedImage
 
 // An enum representing the source of error
 // For example, error could originate while getting a random Gif
@@ -31,6 +32,7 @@ struct GifImageViewModel: Equatable, Identifiable {
     let url: URL
     let pgRatingImage: Image
     let hash: String
+    let gifData: Data?
 }
 
 enum LoadingState: Equatable {
@@ -64,7 +66,6 @@ final class HomeScreenViewModel: ObservableObject {
     private  let networkService: NetworkService
     
     init(networkService: NetworkService, isSearching: Bool = false) {
-
         self.networkService = networkService
         self.isSearching = isSearching
         
@@ -104,7 +105,7 @@ final class HomeScreenViewModel: ObservableObject {
         self.state = .loading
         
         networkService
-            .searchGifs(searchText: searchText)
+            .requestForObject(apiRoute: .searchGifs(searchText))
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 
@@ -122,16 +123,18 @@ final class HomeScreenViewModel: ObservableObject {
                 default:
                     break
                 }
-            } receiveValue: { [weak self] gifs in
+            } receiveValue: { [weak self] (gifSearchImagesContainer: GifSearchImagesContainer) in
                 
                 guard let self = self else { return }
+
+                let gifs = gifSearchImagesContainer.data
                 
                 guard !gifs.isEmpty else {
                     self.showAlert = true
                     self.state = .failed(ErrorViewModel(title: "No Gifs Found", message: "Could not find any search results for search text '\(searchText)'", source: .searchGif(self.searchText)))
                     return
                 }
-                self.state = .searchedGifs(gifs.map { GifImageViewModel(title: $0.title, url: $0.url, pgRatingImage: Image($0.rating.rawValue), hash: $0.hash) })
+                self.state = .searchedGifs(gifs.map { GifImageViewModel(title: $0.title, url: $0.url, pgRatingImage: Image($0.rating.rawValue), hash: $0.hash, gifData: $0.data) })
             }.store(in: &self.subscriptions)
     }
     
@@ -143,7 +146,7 @@ final class HomeScreenViewModel: ObservableObject {
         self.state = .loading
 
         getRandomGifPublisher = networkService
-            .getRandomGif()
+            .requestForObject(apiRoute: .getRandomGif)
             .receive(on: DispatchQueue.main).sink { [weak self] completion in
                 
                 guard let self = self else { return }
@@ -160,8 +163,9 @@ final class HomeScreenViewModel: ObservableObject {
                 default:
                     break
                 }
-            } receiveValue: { [weak self] randomGif in
-                self?.state = .randomGif(GifImageViewModel(title: randomGif.title, url: randomGif.url, pgRatingImage: Image(randomGif.rating.rawValue), hash: randomGif.hash))
+            } receiveValue: { [weak self] (randomGifContainer: GifImageContainer) in
+                let randomGif = randomGifContainer.data
+                self?.state = .randomGif(GifImageViewModel(title: randomGif.title, url: randomGif.url, pgRatingImage: Image(randomGif.rating.rawValue), hash: randomGif.hash, gifData: randomGif.data))
             }
     }
     
