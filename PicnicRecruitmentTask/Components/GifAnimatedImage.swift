@@ -10,7 +10,7 @@ import FLAnimatedImage
 
 struct GifAnimatedImage: UIViewRepresentable {
 
-    let data: Data?
+    let url: URL?
     let placeholderImageName: String
 
     private let imageView: FLAnimatedImageView = {
@@ -32,17 +32,26 @@ extension GifAnimatedImage {
             imageView.widthAnchor.constraint(equalTo: view.widthAnchor)
         ])
 
-        if let data = data {
-            imageView.animatedImage = FLAnimatedImage(animatedGIFData: data)
-        } else {
-            imageView.image = UIImage(named: "")
-        }
+        imageView.image = UIImage(named: placeholderImageName)
 
         return view
     }
 
   func updateUIView(_ uiView: UIView, context: Context) {
-      // no-op
+
+      guard let url = url else {
+          return
+      }
+
+      DispatchQueue.global().async {
+          if let data = try? Data(contentsOf: url) {
+              let image = FLAnimatedImage(animatedGIFData: data)
+
+              DispatchQueue.main.async {
+                  imageView.animatedImage = image
+              }
+          }
+      }
   }
 }
 

@@ -22,7 +22,7 @@ struct GifsGridView: View {
             ForEach(gifImages) { gifImage in
                 NavigationLink(destination: gifDetailsView(from: gifImage)) {
                     VStack(spacing: 0) {
-                        GifAnimatedImage(data: gifImage.gifData, placeholderImageName: "search").frame(minWidth: 100, minHeight: 100).scaledToFit()
+                        GifAnimatedImage(url: gifImage.url, placeholderImageName: "search").frame(minWidth: 100, minHeight: 100).scaledToFit()
                     }
                 }
             }

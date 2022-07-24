@@ -32,7 +32,6 @@ struct GifImageViewModel: Equatable, Identifiable {
     let url: URL
     let pgRatingImage: Image
     let hash: String
-    let gifData: Data?
 }
 
 enum LoadingState: Equatable {
@@ -134,7 +133,7 @@ final class HomeScreenViewModel: ObservableObject {
                     self.state = .failed(ErrorViewModel(title: "No Gifs Found", message: "Could not find any search results for search text '\(searchText)'", source: .searchGif(self.searchText)))
                     return
                 }
-                self.state = .searchedGifs(gifs.map { GifImageViewModel(title: $0.title, url: $0.url, pgRatingImage: Image($0.rating.rawValue), hash: $0.hash, gifData: $0.data) })
+                self.state = .searchedGifs(gifs.map { GifImageViewModel(title: $0.title, url: $0.url, pgRatingImage: Image($0.rating.rawValue), hash: $0.hash) })
             }.store(in: &self.subscriptions)
     }
     
@@ -165,7 +164,7 @@ final class HomeScreenViewModel: ObservableObject {
                 }
             } receiveValue: { [weak self] (randomGifContainer: GifImageContainer) in
                 let randomGif = randomGifContainer.data
-                self?.state = .randomGif(GifImageViewModel(title: randomGif.title, url: randomGif.url, pgRatingImage: Image(randomGif.rating.rawValue), hash: randomGif.hash, gifData: randomGif.data))
+                self?.state = .randomGif(GifImageViewModel(title: randomGif.title, url: randomGif.url, pgRatingImage: Image(randomGif.rating.rawValue), hash: randomGif.hash))
             }
     }
     
