@@ -62,11 +62,13 @@ final class HomeScreenViewModel: ObservableObject {
     private var searchGifsPublisher: AnyCancellable?
     private var getRandomGifPublisher: AnyCancellable?
     
-    private  let networkService: NetworkService
+    private let networkService: NetworkService
+    private let cache: Cacheable
     
-    init(networkService: NetworkService, isSearching: Bool = false) {
+    init(networkService: NetworkService, isSearching: Bool = false, cache: Cacheable = Cache.shared) {
         self.networkService = networkService
         self.isSearching = isSearching
+        self.cache = cache
         
         searchGifsPublisher = $searchText
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
@@ -118,7 +120,7 @@ final class HomeScreenViewModel: ObservableObject {
                     // For later debugging and also log them on appropriate
                     // Servers for later monitoring
 
-                    self.state = .failed(ErrorViewModel(title: "Error", message: error.errorMessageString(), source: .searchGif(searchText)))
+                    self.setFinalState(with: .failed(ErrorViewModel(title: "Error", message: error.errorMessageString(), source: .searchGif(searchText))))
                 default:
                     break
                 }
@@ -130,15 +132,14 @@ final class HomeScreenViewModel: ObservableObject {
                 
                 guard !gifs.isEmpty else {
                     self.showAlert = true
-                    self.state = .failed(ErrorViewModel(title: "No Gifs Found", message: "Could not find any search results for search text '\(searchText)'", source: .searchGif(self.searchText)))
+                    self.setFinalState(with: .failed(ErrorViewModel(title: "No Gifs Found", message: "Could not find any search results for search text '\(searchText)'", source: .searchGif(self.searchText))))
                     return
                 }
-                self.state = .searchedGifs(gifs.map { GifImageViewModel(title: $0.title, url: $0.url, pgRatingImage: Image($0.rating.rawValue), hash: $0.hash) })
+                self.setFinalState(with: .searchedGifs(gifs.map { GifImageViewModel(title: $0.title, url: $0.url, pgRatingImage: Image($0.rating.rawValue), hash: $0.hash) }))
             }.store(in: &self.subscriptions)
     }
     
     func loadRandomGif() {
-        
         // Cancel the previous request if it's still in flight
         getRandomGifPublisher?.cancel()
         
@@ -157,17 +158,29 @@ final class HomeScreenViewModel: ObservableObject {
                     // TODO in future: In case of failure, log the error message locally
                     // For later debugging and also log them on appropriate
                     // Servers for later monitoring
-                    
-                    self.state = .failed(ErrorViewModel(title: "Error", message: error.errorMessageString(), source: .randomGif))
+
+                    self.setFinalState(with: .failed(ErrorViewModel(title: "Error", message: error.errorMessageString(), source: .randomGif)))
                 default:
                     break
                 }
             } receiveValue: { [weak self] (randomGifContainer: GifImageContainer) in
+
+                guard let self = self else { return }
+
                 let randomGif = randomGifContainer.data
-                self?.state = .randomGif(GifImageViewModel(title: randomGif.title, url: randomGif.url, pgRatingImage: Image(randomGif.rating.rawValue), hash: randomGif.hash))
+                self.setFinalState(with: .randomGif(GifImageViewModel(title: randomGif.title, url: randomGif.url, pgRatingImage: Image(randomGif.rating.rawValue), hash: randomGif.hash)))
             }
     }
-    
+
+    private func setFinalState(with state: LoadingState) {
+        DispatchQueue.global().async {
+            self.cache.clearCache()
+            DispatchQueue.main.async {
+                self.state = state
+            }
+        }
+    }
+
     func retryLastRequest(from source: ErrorSource) {
         switch source {
         case .randomGif:

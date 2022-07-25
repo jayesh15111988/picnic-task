@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FLAnimatedImage
 
 // A unified Styles document to store all the UI-related styles in the app
 

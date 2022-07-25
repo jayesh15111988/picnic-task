@@ -19,10 +19,14 @@ struct GifsGridView: View {
 
     var body: some View {
         LazyVGrid(columns: gridItemLayout, spacing: Spacing.small) {
-            ForEach(gifImages) { gifImage in
+
+            ForEach(gifImages.indices, id: \.self) { index in
+                let gifImage = gifImages[index]
                 NavigationLink(destination: gifDetailsView(from: gifImage)) {
                     VStack(spacing: 0) {
-                        GifAnimatedImage(url: gifImage.url, placeholderImageName: "search").frame(minWidth: 100, minHeight: 100).scaledToFit()
+                        GifAnimatedImage(url: gifImage.url, placeholderImageName: "search", sequence: index)
+                            .frame(minWidth: 100, minHeight: 100)
+                            .scaledToFit()
                     }
                 }
             }

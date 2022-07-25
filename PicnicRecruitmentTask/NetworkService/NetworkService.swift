@@ -16,7 +16,7 @@ protocol NetworkService {
 
 struct NetworkServiceImpl: NetworkService {
     
-    let urlSession: URLSession
+    private let urlSession: URLSession
     
     init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession

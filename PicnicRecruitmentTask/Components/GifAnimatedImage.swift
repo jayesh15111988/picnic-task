@@ -12,6 +12,15 @@ struct GifAnimatedImage: UIViewRepresentable {
 
     let url: URL?
     let placeholderImageName: String
+    let sequence: Int
+    let cache: Cacheable
+
+    init(url: URL?, placeholderImageName: String, sequence: Int, cache: Cacheable = Cache.shared) {
+        self.url = url
+        self.placeholderImageName = placeholderImageName
+        self.sequence = sequence
+        self.cache = cache
+    }
 
     private let imageView: FLAnimatedImageView = {
         let imageView = FLAnimatedImageView()
@@ -43,10 +52,15 @@ extension GifAnimatedImage {
           return
       }
 
+      if let image = cache.getImage(for: url) {
+          imageView.animatedImage = image
+          return
+      }
+
       DispatchQueue.global().async {
           if let data = try? Data(contentsOf: url) {
               let image = FLAnimatedImage(animatedGIFData: data)
-
+              cache.store(image: image, for: url)
               DispatchQueue.main.async {
                   imageView.animatedImage = image
               }

@@ -15,37 +15,39 @@ final class MockNetworkService: NetworkService {
     
     var toFail = false
     
-    func getRandomGif() -> AnyPublisher<GifImage, DataLoadError> {
-        if toFail {
-            return Fail(error: DataLoadError.genericError("Something went wrong while getting random GIF")).eraseToAnyPublisher()
-        }
-        
-        if let randomGifData = JSONDataReader.getDataFromJSONFile(with: "random_gif") {
-            if let decodedGifData = try? JSONDecoder().decode(GifImageContainer.self, from: randomGifData) {
-                return Just<GifImage>(decodedGifData.data).setFailureType(to: DataLoadError.self).eraseToAnyPublisher()
-            } else {
-                XCTFail("Failed to convert data into valid GifImage object")
+    func requestForObject<T: Decodable>(apiRoute: APIRoute) -> AnyPublisher<T, DataLoadError> {
+
+        switch apiRoute {
+        case .getRandomGif:
+
+            if toFail {
+                return Fail(error: DataLoadError.genericError("Something went wrong while getting random GIF")).eraseToAnyPublisher()
             }
-        } else {
-            XCTFail("Failed to get valid random Gif data from local JSON file")
-        }
-        fatalError("Cannot continue with test. Failed to get valid object from local JSON file")
-    }
-    
-    func searchGifs(searchText: String) -> AnyPublisher<[GifImage], DataLoadError> {
-        if toFail {
-            return Fail(error: DataLoadError.genericError("Something went wrong while searching for GIF")).eraseToAnyPublisher()
-        }
-        
-        if let randomGifData = JSONDataReader.getDataFromJSONFile(with: "search_gifs") {
-            if let decodedGifsData = try? JSONDecoder().decode(GifSearchImagesContainer.self, from: randomGifData) {
-                return Just<[GifImage]>(decodedGifsData.data).setFailureType(to: DataLoadError.self).eraseToAnyPublisher()
+
+            if let randomGifData = JSONDataReader.getDataFromJSONFile(with: "random_gif") {
+                if let decodedGifData = try? JSONDecoder().decode(T.self, from: randomGifData) {
+                    return Just<T>(decodedGifData).setFailureType(to: DataLoadError.self).eraseToAnyPublisher()
+                } else {
+                    XCTFail("Failed to convert data into valid GifImage object")
+                }
             } else {
-                XCTFail("Failed to convert data into valid array of GifImage objects")
+                XCTFail("Failed to get valid random Gif data from local JSON file")
             }
-        } else {
-            XCTFail("Failed to get valid searched Gifs data from local JSON file")
+        case .searchGifs:
+            if toFail {
+                return Fail(error: DataLoadError.genericError("Something went wrong while searching for GIF")).eraseToAnyPublisher()
+            }
+
+            if let searchGifData = JSONDataReader.getDataFromJSONFile(with: "search_gifs") {
+                if let decodedGifsData = try? JSONDecoder().decode(T.self, from: searchGifData) {
+                    return Just<T>(decodedGifsData).setFailureType(to: DataLoadError.self).eraseToAnyPublisher()
+                } else {
+                    XCTFail("Failed to convert data into valid array of GifImage objects")
+                }
+            } else {
+                XCTFail("Failed to get valid searched Gifs data from local JSON file")
+            }
         }
-        fatalError("Cannot continue with test. Failed to get valid object from local JSON file")
+        fatalError("Unexpected state. Control should not reach this line. Expected known cases. Received new case \(apiRoute)")
     }
 }

@@ -16,6 +16,7 @@
 		912E15F2287C8A2E00CC81D9 /* JSONDataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15F1287C8A2E00CC81D9 /* JSONDataReader.swift */; };
 		912E15F4287C8A6A00CC81D9 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E15F3287C8A6A00CC81D9 /* MockNetworkService.swift */; };
 		9169F92A287CAC93008D9BED /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9169F929287CAC93008D9BED /* README.md */; };
+		91724236288E8608004DCCA3 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91724235288E8608004DCCA3 /* Cache.swift */; };
 		91BE2F35288D4CBA00C8F600 /* GifAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE2F34288D4CBA00C8F600 /* GifAnimatedImage.swift */; };
 		91C4B207288C10F900E01FB2 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4B206288C10F900E01FB2 /* APIRoute.swift */; };
 		91D72DD9287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72DD8287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift */; };
@@ -64,6 +65,7 @@
 		912E15F1287C8A2E00CC81D9 /* JSONDataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataReader.swift; sourceTree = "<group>"; };
 		912E15F3287C8A6A00CC81D9 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		9169F929287CAC93008D9BED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		91724235288E8608004DCCA3 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		91BE2F34288D4CBA00C8F600 /* GifAnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifAnimatedImage.swift; sourceTree = "<group>"; };
 		91C4B206288C10F900E01FB2 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
 		91D72DD5287C055200C5AD9D /* PicnicRecruitmentTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicnicRecruitmentTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,14 @@
 			path = TestUtility;
 			sourceTree = "<group>";
 		};
+		91724234288E85FF004DCCA3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				91724235288E8608004DCCA3 /* Cache.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		91D72DCC287C055200C5AD9D = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		91D72DD7287C055200C5AD9D /* PicnicRecruitmentTask */ = {
 			isa = PBXGroup;
 			children = (
+				91724234288E85FF004DCCA3 /* Core */,
 				91D72E16287C749C00C5AD9D /* Models */,
 				91D72E0B287C09D600C5AD9D /* Styles */,
 				91D72E08287C097900C5AD9D /* Utilities */,
@@ -475,6 +486,7 @@
 				910C4131288A8573008FF15D /* GifsGridView.swift in Sources */,
 				91BE2F35288D4CBA00C8F600 /* GifAnimatedImage.swift in Sources */,
 				91D72DD9287C055200C5AD9D /* PicnicRecruitmentTaskApp.swift in Sources */,
+				91724236288E8608004DCCA3 /* Cache.swift in Sources */,
 				91D72E0A287C099000C5AD9D /* UIApplication+Extension.swift in Sources */,
 				91C4B207288C10F900E01FB2 /* APIRoute.swift in Sources */,
 				91D72E07287C084500C5AD9D /* SearchBar.swift in Sources */,

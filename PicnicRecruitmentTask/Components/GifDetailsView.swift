@@ -14,12 +14,9 @@ struct GifDetailsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Spacing.large) {
-                GifAnimatedImage(url: gifImageViewModel.url, placeholderImageName: "search").frame(maxWidth: .infinity, minHeight: 200).padding()
-//                AnimatedImage(url: gifImageViewModel.url).placeholder {
-//                    ProgressView()
-//                }
-//                .resizable()
-//                .scaledToFit()
+                GifAnimatedImage(url: gifImageViewModel.url, placeholderImageName: "search", sequence: 0)
+                    .frame(maxWidth: .infinity, minHeight: 200)
+                    .padding()
 
                 Divider()
                 
