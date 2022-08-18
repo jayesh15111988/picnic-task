@@ -26,7 +26,7 @@ struct ErrorViewModel: Equatable {
 
 struct GifImageViewModel: Equatable, Identifiable {
     var id: String {
-        return hash
+        return url.absoluteString
     }
     let title: String
     let url: URL

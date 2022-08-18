@@ -49,21 +49,28 @@ extension GifAnimatedImage {
   func updateUIView(_ uiView: UIView, context: Context) {
 
       guard let url = url else {
+          print("Failed")
           return
       }
 
       if let image = cache.getImage(for: url) {
           imageView.animatedImage = image
+          print("Used Cached value")
           return
       }
 
+      print("Getting data now")
       DispatchQueue.global().async {
           if let data = try? Data(contentsOf: url) {
               let image = FLAnimatedImage(animatedGIFData: data)
               cache.store(image: image, for: url)
+              print("Stored in cache")
               DispatchQueue.main.async {
                   imageView.animatedImage = image
+                  print("Applied to image")
               }
+          } else {
+              print("Failed")
           }
       }
   }
