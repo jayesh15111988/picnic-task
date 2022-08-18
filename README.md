@@ -4,6 +4,11 @@
 
 # Picnic Task
 
+## Demo
+
+https://user-images.githubusercontent.com/6687735/185345490-28c82355-dc59-4f34-98b7-838ac2d65fe6.mov
+
+
 ## Overview
 
 The aim of this project is to develop an iOS app to display and search random GIFs using [Giphy endpoints](https://developers.giphy.com/branch/master/docs/sdk/).
