@@ -10,11 +10,12 @@ import SwiftUI
 struct GifDetailsView: View {
     
     let gifImageViewModel: GifImageViewModel
+    let serialQueue = DispatchQueue(label: "git details view serial queue")
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Spacing.large) {
-                GifAnimatedImage(url: gifImageViewModel.url, placeholderImageName: "search", sequence: 0)
+                GifAnimatedImage(url: gifImageViewModel.url, placeholderImageName: "search", sequence: 0, serialQueue: serialQueue)
                     .frame(maxWidth: .infinity, minHeight: 200)
                     .padding()
 
@@ -24,7 +25,7 @@ struct GifDetailsView: View {
                 
                 Divider()
                 
-                Text(gifImageViewModel.url.absoluteString)
+                Text(gifImageViewModel.urlString)
                 
                 Divider()
                 

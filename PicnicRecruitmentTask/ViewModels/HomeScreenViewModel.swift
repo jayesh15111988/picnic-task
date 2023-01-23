@@ -32,6 +32,10 @@ struct GifImageViewModel: Equatable, Identifiable {
     let url: URL
     let pgRatingImage: Image
     let hash: String
+
+    var urlString: String {
+        url.absoluteString
+    }
 }
 
 enum LoadingState: Equatable {
@@ -55,7 +59,7 @@ final class HomeScreenViewModel: ObservableObject {
     
     private struct Constants {
         static let timerInterval = 10.0 // Timer interval in seconds
-        static let minimumNumberOfCharacters = 2 // Minimum number of characters to type before search is triggered
+        static let minimumNumberOfCharacters = 3 // Minimum number of characters to type before search is triggered
     }
     
     var timerPublisher: AnyCancellable?
@@ -71,7 +75,7 @@ final class HomeScreenViewModel: ObservableObject {
         self.cache = cache
         
         searchGifsPublisher = $searchText
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .debounce(for: .seconds(0.75), scheduler: DispatchQueue.main)
             .removeDuplicates()
             .filter { $0.count >= Constants.minimumNumberOfCharacters }
             .sink { [weak self] in
@@ -173,7 +177,7 @@ final class HomeScreenViewModel: ObservableObject {
     }
 
     private func setFinalState(with state: LoadingState) {
-        DispatchQueue.global().async {
+        DispatchQueue.global(qos: .background).async {
             self.cache.clearCache()
             DispatchQueue.main.async {
                 self.state = state

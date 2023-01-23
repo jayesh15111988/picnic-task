@@ -23,7 +23,9 @@ enum APIRoute {
         static let maxGifsCountPerSearchRequest = 20
     }
 
-    private var baseURLString: String { "https://api.giphy.com/v1/gifs/" }
+    private var baseURLString: String {
+        "https://api.giphy.com/v1/gifs/"
+    }
 
     private var url: URL? {
         switch self {

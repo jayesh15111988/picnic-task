@@ -35,6 +35,7 @@
 		91D72E18287C74AF00C5AD9D /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E17287C74AF00C5AD9D /* GifImage.swift */; };
 		91D72E1A287C74DE00C5AD9D /* GifImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E19287C74DE00C5AD9D /* GifImageContainer.swift */; };
 		91D72E1C287C74F000C5AD9D /* GifSearchImagesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72E1B287C74F000C5AD9D /* GifSearchImagesContainer.swift */; };
+		91FABBA3297E811900FC18E5 /* Data+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FABBA2297E811900FC18E5 /* Data+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		91D72E17287C74AF00C5AD9D /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		91D72E19287C74DE00C5AD9D /* GifImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageContainer.swift; sourceTree = "<group>"; };
 		91D72E1B287C74F000C5AD9D /* GifSearchImagesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchImagesContainer.swift; sourceTree = "<group>"; };
+		91FABBA2297E811900FC18E5 /* Data+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Utilities.swift"; sourceTree = "<group>"; };
 		ADDF582C5DA92F61713EB219 /* Pods-PicnicRecruitmentTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicRecruitmentTask.release.xcconfig"; path = "Target Support Files/Pods-PicnicRecruitmentTask/Pods-PicnicRecruitmentTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,9 +259,9 @@
 		91D72E05287C063400C5AD9D /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				91D72E14287C703200C5AD9D /* DataLoadError.swift */,
 				91D72E10287C1F0700C5AD9D /* NetworkService.swift */,
 				91C4B206288C10F900E01FB2 /* APIRoute.swift */,
-				91D72E14287C703200C5AD9D /* DataLoadError.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				91D72E09287C099000C5AD9D /* UIApplication+Extension.swift */,
+				91FABBA2297E811900FC18E5 /* Data+Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				91D72E15287C703200C5AD9D /* DataLoadError.swift in Sources */,
 				91D72E1A287C74DE00C5AD9D /* GifImageContainer.swift in Sources */,
 				91D72E1C287C74F000C5AD9D /* GifSearchImagesContainer.swift in Sources */,
+				91FABBA3297E811900FC18E5 /* Data+Utilities.swift in Sources */,
 				91D72DDB287C055200C5AD9D /* HomeScreenView.swift in Sources */,
 				91D72E0F287C106700C5AD9D /* HomeScreenViewModel.swift in Sources */,
 				91D72E0D287C09DE00C5AD9D /* Styles.swift in Sources */,

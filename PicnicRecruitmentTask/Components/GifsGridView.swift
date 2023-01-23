@@ -15,16 +15,19 @@ struct GifsGridView: View {
         GridItem(.flexible())
     }
 
+    let serialQueue = DispatchQueue(label: "GIF Loading Queue")
+
     @State private var isAnimatingGifImage = false
 
     var body: some View {
         LazyVGrid(columns: gridItemLayout, spacing: Spacing.small) {
-
             ForEach(gifImages.indices, id: \.self) { index in
+
                 let gifImage = gifImages[index]
+
                 NavigationLink(destination: gifDetailsView(from: gifImage)) {
                     VStack(spacing: 0) {
-                        GifAnimatedImage(url: gifImage.url, placeholderImageName: "search", sequence: index)
+                        GifAnimatedImage(url: gifImage.url, placeholderImageName: "search", sequence: index, serialQueue: serialQueue)
                             .frame(minWidth: 100, minHeight: 100)
                             .scaledToFit()
                     }

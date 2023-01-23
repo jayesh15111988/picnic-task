@@ -12,6 +12,7 @@ protocol Cacheable {
     func store(image: FLAnimatedImage?, for url: URL)
     func getImage(for url: URL) -> FLAnimatedImage?
     func clearCache()
+    func size() -> Int
 }
 
 final class Cache: Cacheable {
@@ -44,5 +45,9 @@ final class Cache: Cacheable {
         concurrentQueue.sync(flags: .barrier) {
             store.removeAll()
         }
+    }
+
+    func size() -> Int {
+        return store.count
     }
 }

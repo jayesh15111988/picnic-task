@@ -14,12 +14,14 @@ struct GifAnimatedImage: UIViewRepresentable {
     let placeholderImageName: String
     let sequence: Int
     let cache: Cacheable
+    let serialQueue: DispatchQueue
 
-    init(url: URL?, placeholderImageName: String, sequence: Int, cache: Cacheable = Cache.shared) {
+    init(url: URL?, placeholderImageName: String, sequence: Int, cache: Cacheable = Cache.shared, serialQueue: DispatchQueue) {
         self.url = url
         self.placeholderImageName = placeholderImageName
         self.sequence = sequence
         self.cache = cache
+        self.serialQueue = serialQueue
     }
 
     private let imageView: FLAnimatedImageView = {
@@ -49,28 +51,25 @@ extension GifAnimatedImage {
   func updateUIView(_ uiView: UIView, context: Context) {
 
       guard let url = url else {
-          print("Failed")
           return
       }
 
       if let image = cache.getImage(for: url) {
           imageView.animatedImage = image
-          print("Used Cached value")
           return
       }
 
-      print("Getting data now")
-      DispatchQueue.global().async {
+      serialQueue.async {
           if let data = try? Data(contentsOf: url) {
               let image = FLAnimatedImage(animatedGIFData: data)
               cache.store(image: image, for: url)
-              print("Stored in cache")
               DispatchQueue.main.async {
                   imageView.animatedImage = image
-                  print("Applied to image")
               }
           } else {
-              print("Failed")
+              DispatchQueue.main.async {
+                  imageView.image = UIImage(named: placeholderImageName)
+              }
           }
       }
   }
